@@ -28,10 +28,10 @@ function TerminalWindow() {
 
   return (
     <div className="introduce">
-      <Terminal name='~/Repos/invitation/.git/MERGE_MSG'
+      <Terminal name='~/Repos/wedding_card/.git/MERGE_MSG'
           colorMode={ ColorMode.Light }
           lineData={ terminalLineData }
-          onInput={ terminalInput => console.log(`New terminal input received: '${ terminalInput }'`) }
+          onInput={ _ => _ }
       />
     </div>
   );

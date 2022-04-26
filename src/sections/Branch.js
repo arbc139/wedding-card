@@ -1,8 +1,5 @@
-import { useState } from 'react';
 
-import _ from 'lodash';
-
-import ReactFlow from 'react-flow-renderer';
+import ReactFlow, { useNodesState, useEdgesState } from 'react-flow-renderer';
 
 import './Branch.css';
 
@@ -98,8 +95,8 @@ const initialEdges = [
 ];
 
 function Branch() {
-  const [nodes, setNodes] = useState(initialNodes);
-  const [edges, setEdges] = useState(initialEdges);
+  const [nodes/*, setNodes, onNodesChange*/] = useNodesState(initialNodes);
+  const [edges/*, setEdges, onEdgesChange*/] = useEdgesState(initialEdges);
 
   return (
     <div className="branch">
@@ -111,8 +108,9 @@ function Branch() {
         maxZoom='1'
         defaultZoom='1'
         panOnDrag={false}
-        nodesDraggable={false}
+        nodesDraggable={true}
         nodesConnectable={false}
+        preventScrolling={false}
       >
       </ReactFlow>
     </div>
