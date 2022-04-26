@@ -1,8 +1,13 @@
+import React from 'react';
+
+import TerminalWindow from '../subsections/TerminalWindow';
+
+import './Introduce.css';
 
 function Introduce() {
   return (
     <div className="introduce">
-      Hi. This is Introduce view
+      <TerminalWindow />
     </div>
   );
 }

@@ -1,15 +1,16 @@
-import './Branch.css';
 import { useState } from 'react';
+
 import ReactFlow from 'react-flow-renderer';
+
+import './Branch.css';
 
 const initialNodes = [
   {
     id: '1',
     type: 'input',
-    data: { label: 'Input Node' },
+    data: { label: '[DY-001] 탄생' },
     position: { x: 250, y: 25 },
   },
-
   {
     id: '2',
     // you can also pass a React component as a label
